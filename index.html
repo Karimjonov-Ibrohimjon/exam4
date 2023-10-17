@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exam4</title>
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
+    
+</head>
+<body>
+    
+    <header site-header>
+        <div class="container">
+            <div class="site-header__wrapper">
+                <a href="./index.html" class="logo-link">
+                    <img src="./images/logobrix.svg" alt="brix logo" width="304" height="40">
+                </a>
+                <button class="site-header__btn">
+                    Register
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button> -->
+    
+    <div class="position-fixed top-0 end-0 p-3 " style="z-index: 11">
+        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-danger">
+                <strong class="me-auto text-white">Invalid Data</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero__box">
+                <h1 class="hero__title">
+                    Get a project quote
+                </h1>
+                <p class="hero__text">
+                    Please fill the form below to receive a quote for your project. Feel <br> free to add as much detail as needed.
+                </p>
+            </div>
+            <!-- form  -->
+            <div class="hero__register registerbox">
+                <h2 class="registerbox__title">
+                    Welcome
+                </h2>
+                <p class="register__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam duis vitae curabitur amet, fermentum lorem. 
+                </p>
+                <form class="hero__form register">
+                    <div class="register__topbox">
+                        <div class="register__inner register__inner--firstname">
+                            <label class="register__label">First name *</label>
+                            <input class="register__nameinput" type="text" placeholder="Your name" >
+                            <span class="register__error register__error--firstname">Your name invalid </span>
+                        </div>
+                        <div class="register__inner register__inner--lastname">
+                            <label class="register__label">Last name *</label>
+                            <input class="register__lnameinput" type="text" placeholder="Your last name">
+                            <span class="register__error register__error--lastname">Your lastname invalid</span>
+                        </div>
+                    </div>
+                    <div class="register__inner register__inner--mail">
+                        <label class="register__label">E-mail *</label>
+                        <input class="register__mailinput" type="email" placeholder="yourmail@gmail.com">
+                        <button type="button" class="register__mailbtn"></button>
+                        <span class="register__error register__error--mail">Your email invalid</span>
+                    </div>
+                    <div class="register__inner register__inner--password">
+                        <label class="register__label">Password *</label>
+                        <input class="register__passwordinput" type="password" placeholder="Your paswword" required>
+                        <button type="button" class="register__passwordbtn"></button>
+                        <span class="register__error register__error--password">Your password invalid</span>
+                    </div>
+                    <div class="register__inner register__inner--repeat">
+                        <label class="register__label">Repeat Password *</label>
+                        <input class="register__repeatinput" type="password" placeholder="Repeat your password" required>
+                        <button type="button" class="register__repeatbtn"></button>
+                        <span class="register__error register__error--repeat">Your pssword invalid</span>
+                    </div>
+                    <div class="register__inner">
+                        <label class="register__label" for="gender">Gender *</label>
+                        <select class="register__select" name="gender" id="gender" required>
+                            <option value="" hidden >Select your gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="register__inner">
+                        <label class="register__label">Birthday</label>
+                        <input class="register__dayinput" type="date" required >
+                    </div>
+                    <span class="register__error"></span>
+                    <div class="register__bottombox">
+                        <input type="checkbox" required >
+                        <p class="register__bottmtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong style="text-decoration: underline;">Gravida eget ultricies</strong> pharetra scelerisque duis cursus.</p>
+                    </div>
+                    <button type="submit" id="liveToastBtn" class="register__btn">Enter</button>
+                </form>
+            </div>
+        </div>
+        
+        
+        <!-- CONTACT DETAILES -->
+        
+        <div class="container">
+            <form class="result__form">
+                <div class="for-carusel">
+                    <div class="contact">
+                        <img src="./images/carusel1.svg" alt="" class="contactimg">
+                        <hr class="contact__line">
+                        <h2 class="contact__title">
+                            Contact details
+                        </h2>
+                        <p class="contact__text">
+                            Lorem ipsum dolor sit amet consectetur adipisc.
+                        </p>
+                        <div class="contact__form">
+                            <label class="contact__label contact__label--name" >
+                                <span class="contact__name">
+                                    Name
+                                </span>
+                                <input type="text" class="contact__nameinput" placeholder="John Carter">
+                                <span class="contact__nameerr">Your name invalid</span>
+                            </label>
+                            <label class="contact__label contact__label--email" >
+                                <span class="contact__email">
+                                    Email
+                                </span>
+                                <input type="email" class="contact__emailinput" placeholder="Email address">
+                                <span class="contact__emailerr">Your email invalid</span>
+                            </label>
+                            <label class="contact__label contact__label--tel" >
+                                <span class="contact__tel">
+                                    Phone number
+                                </span>
+                                <input type="tel" class="contact__telinput" placeholder="+998123456789">
+                                <span class="contact__telerr">Your number invalid</span>
+                            </label>
+                            <label class="contact__label contact__label--company" >
+                                <span class="contact__company">
+                                    Company
+                                </span>
+                                <input type="text" class="contact__companyinput" placeholder="Company name">
+                                <span class="contact__companyerr">Your company name invalid</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- -------------------------------services-------------------------------- -->
+                    <div class="services">
+                        <img src="./images/carusel2.svg" alt="" class="services__img">
+                        <hr class="services__line">
+                        <h2 class="services__title">Our services</h2>
+                        <p class="services__text">Please select which service you are interested in.</p>
+                        <div  class="services__form">
+                            <label class="services__label">
+                                <input name="services__input" type="radio" value="Development" class="services__devinput">
+                                <span class="services__devtext">Development</span>
+                            </label>
+                            <label class="services__label">
+                                <input name="services__input" type="radio" value="Web Design" class="services__webinput">
+                                <span class="services__webtext">Web Design</span>
+                            </label>
+                            <label class="services__label">
+                                <input name="services__input" type="radio" value="Marketing" class="services__marketinginput">
+                                <span class="services__marektingtext">Marketing</span>
+                            </label>
+                            <label class="services__label">
+                                <input name="services__input" type="radio" value="Other" class="services__otherinput">
+                                <span class="services__othertext">Other</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- -----------------------budget---------------------------------- -->
+                    <div class="budget">
+                        <img src="./images/CARUSEL3.svg" alt="" class="budget__img">
+                        <hr class="budget__line">
+                        <h2 class="budget__title">What’s your project budget?</h2>
+                        <p class="budget__text">Please select the project budget range you have in mind.</p>
+                        <div class="budget__form">
+                            <label class="budget__label">
+                                <input name="budget__input" type="radio" value="$5.000 - $10.000" class="budget__firstinput">
+                                <span class="budget__firsttext">$5.000 - $10.000</span>
+                            </label>
+                            <label class="budget__label">
+                                <input name="budget__input" type="radio" value="$10.000 - $20.000" class="budget__secinput">
+                                <span class="budget__sectext">$10.000 - $20.000</span>
+                            </label>
+                            <label class="budget__label">
+                                <input name="budget__input" type="radio" value="$20.000 - $50.000" class="budget__thirdinput">
+                                <span class="budget__thirdtext">$20.000 - $50.000</span>
+                            </label>
+                            <label class="budget__label">
+                                <input name="budget__input" type="radio" value="$50.000 +" class="budget__fourinput">
+                                <span class="budget__fourtext">$50.000 +</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- --------------------------SUBMIT----------------------------------- -->
+                    <div class="submit">
+                        <img class="submit__img" src="./images/carusel5.svg" alt="">
+                        <hr class="submit__line">
+                        <div class="submit__inner">
+                            <h2 class="submit__title">
+                                Submit your quote request
+                            </h2>
+                            <p class="submit__text">
+                                Please review all the information you previously typed in the past steps, and if all is okay, submit your message to receive a project quote in 24 - 48 hours.
+                            </p>
+                            <button type="submit" class="submit__btn">
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="btn-box">
+                <button class="previous-btn">
+                    Previous Step
+                </button>
+                <button class="Next-btn">
+                    Next Step
+                </button>
+            </div>
+            <div class="desc-none">
+                <h2 class="desc__title">
+                    Project description
+                </h2>
+                <span class="resulerr">Please enter all information correctly</span>
+                <div class="desc__inner">
+                    <div class="desc__box">
+                        <p class="desc__name">
+                            Name:
+                        </p>
+                        <span class="desc__resultname">
+                            
+                        </span>
+                    </div>
+                    <div class="desc__box">
+                        <p class="desc__mail">
+                            Email:
+                        </p>
+                        <span class="desc__resultemail">
+                            
+                        </span>
+                    </div>
+                    <div class="desc__box">
+                        <p class="desc__contact">
+                            Contact:
+                        </p>
+                        <span class="desc__resultcontact">
+                            
+                        </span>
+                    </div>
+                    <div class="desc__box">
+                        <p class="desc__company">
+                            Company:
+                        </p>
+                        <span class="desc__resultcomp">
+                            
+                        </span>
+                    </div>
+                    <div class="desc__box">
+                        <p class="desc__service">
+                            Service:
+                        </p>
+                        <span class="desc__resultservice">
+                            
+                        </span>
+                    </div>
+                    <div class="desc__box">
+                        <p class="desc__budget">
+                            Budget:
+                        </p>
+                        <span class="desc__resultbudget">
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    <hr>
+    
+    <footer class="site__footer footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__inner">
+                    <a href="./index.html" class="footer__logo"><img src="./images/logobrix.svg" alt="Logo" width="262" height="34"></a>
+                    <p class="footer__text">
+                        Copyright © 2021 BRIX Templates | All Rights Reserved
+                    </p>
+                </div>
+                <form class="footer__form">
+                    <input class="footer__input" type="email" placeholder="Enter your email">
+                    <button class="footer__btn">Subcribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./dist/js/bootstrap.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
